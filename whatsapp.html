@@ -78,7 +78,10 @@
             width: 350px;
             padding-left: 10px;
         }
+          #cont-field :hover{
+            background-color: rgb(200, 200, 200);
 
+          }
         #cont-head-bar {
             float: right;
             justify-content: center;
@@ -146,7 +149,7 @@
         }
 
         body {
-            background-image: linear-gradient(green 0 20%, white 20% 100%);
+            background-image: linear-gradient(#00a884 0 20%, white 20% 100%);
             height: 88.5vh;
 
         }
@@ -177,7 +180,7 @@
                     <i class="fa fa-navicon" style="font-size:20px"></i>
                 </div>
             </div>
-            <div>
+            <div id="cont-field">
                 <div id="cont-link">
                     <img class="cont-link-img"
                         src="https://static.vecteezy.com/system/resources/previews/034/210/204/non_2x/3d-cartoon-baby-genius-photo.jpg">
@@ -258,7 +261,15 @@
                         function addtext(event) {
                             event.preventDefault();
                             var mes = document.getElementById("ip-mess").value;
-                            var add = document.getElementById("chat-body").innerHTML = mes;
+                           // var add = document.getElementById("chat-body").innerHTML = mes;
+                           var as=document.getElementById("chat-body");
+                           let a=as.value;
+                           if(a.length !=0){
+                                    as.innerText=a +"<br/>"+mes;
+                                    console.log("inside");
+                           }else{
+                            as.innerText=mes;
+                           }
                             console.log(mes);
                         }
 
