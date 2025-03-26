@@ -1,0 +1,16 @@
+<div class="container">
+    <h2>{{ isEdit ? 'Edit User' : 'Add User' }}</h2>
+    <form (submit)="submitForm()">
+      <label>Name:</label>
+      <input [(ngModel)]="user.name" name="name"  required><br><br>
+      
+      <label>Email:</label>
+      <input [(ngModel)]="user.email" name="email" required><br><br>
+      
+      <label>Phone:</label>
+      <input [(ngModel)]="user.phone" name="phone" required><br><br>
+      
+      <button type="submit">{{ isEdit ? 'Update' : 'Create' }}</button>
+    </form>
+  </div>
+  
